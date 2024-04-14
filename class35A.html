@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" id="nameInput" placeholder="Enter your name">
+    <button onclick="checkName()">Check Name</button>
+    <p id="demo"></p>
+
+    <script>
+
+        function display(result){
+             document.getElementById('demo').innerHTML = result;
+                      
+        }
+
+
+        function capitalizeFirstLetter(string){
+            return string.charAt(0).toUppercase()+string.slice(1);
+        }
+
+        function checkName() {
+            let name = document.getElementById('nameInput').value.toLowerCase();
+
+            let validNames = ["Bhumika", "dev", "tanishka","Surya","deepika","mohit","sandeep"];
+
+
+            // Capitalize the first latter (Array) = 
+            validNames = validNames.map(function(name){
+                return capitalizeFirstLetter(name);
+            });
+       
+
+            let promise = new Promise(function(resolve, reject) {
+
+                let capitalizeInputName  = capitalizeFirstLetter(name);
+
+                if (validNames.includes(capitalizeInputName)) {
+                    resolve("Welcome, " +capitalizeInputName );
+                } else {
+                    reject("Error: Incorrect name entered.");
+                }
+            });
+
+            promise.then(
+                function(value){
+                    display(value);
+                },
+                function(error){
+                    display(error);
+                }
+            );
+
+         
+            
+        }
+//         let a = "i am Sandeep kumar ";
+
+//         document.writeln(a); 
+//         document.writeln("<br>");
+        
+        
+
+//         let word = a.split(" ");
+//    for(let  i = 0; i < word.length; i++) {
+//     word[i] = word[i].charAt(0).toUpperCase() + word[i].slice(1);
+//    }
+//    let capital = word.join(" ");
+// // document.writeln(capital);
+// document.writeln(capital);
+
+
+
+
+    </script>
+
+</body>
+</html>

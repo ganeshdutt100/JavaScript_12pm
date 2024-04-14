@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+            margin: 50px;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div  id="box"></div> -->
+
+    <script>
+        // let box =  document.getElementById('box');
+        
+
+        // box.addEventListener('click',function(){
+        //     this.style.backgroundColor = 'green';
+        // })
+
+
+        // box.addEventListener('mouseover',function(){
+        //     this.style.backgroundColor = 'yellow';
+        // })
+
+
+        // box.addEventListener('mouseout',function(){
+        //     this.style.backgroundColor = 'black';
+        // })
+
+
+        // box.addEventListener('mousedown',function(){
+        //     this.style.backgroundColor = 'red';
+        // })
+        // box.addEventListener('mouseup',function(){
+        //     this.style.backgroundColor = 'blue';
+        // })
+
+
+        // box.addEventListener('click',function(){
+        //     this.style.width = '100px';
+        // })
+        // box.addEventListener('dblclick',function(){
+        //     this.style.width = '200px';
+        // })
+
+
+        // // box.addEventListener('mousemove',function(){
+        // //     this.style.width = '500px';
+        // // })
+        // box.addEventListener('mouseover',function(){
+        //     this.style.width = '500px';
+        // })
+        // box.addEventListener('dblclick',function(){
+        //     this.style.width = '200px';
+        // })
+
+
+        box.addEventListener('keydown',function(){
+            this.style.width = '200px';
+        })
+        box.addEventListener('mouseleave',function(){
+            this.style.width = '100px';
+        })
+    </script>
+</body>
+</html>

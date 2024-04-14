@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="init()">Click me </button>
+    
+    <script>
+ 
+//  function init() {
+//     alert("hello world!")
+//     // console.log('clicked');
+    
+//    }
+document.writeln("<br>");
+
+
+// function fun(){
+//     document.writeln("fun ");
+    
+// }
+// fun();
+// fun();
+// fun();
+// document.writeln("loop");
+// document.writeln("fun123 ");
+
+// fun();
+// fun();
+
+
+// document.writeln("<br>");
+// let a = 10;
+
+// for(let i = 0; i<a; i++){
+//     if( i ==  5){
+//         document.writeln();
+// document.writeln("loop");
+        
+//     }
+//   document.writeln("fun");
+  
+// }
+
+// document.writeln("<br>");
+
+
+// function add(a ,b){
+//   let sum = a + b;
+//   return sum;
+// }
+// let result  = add(70,60);
+
+// document.writeln(result);
+
+
+// function funName( name){
+//   return name;
+//    }
+
+//   let name  =  funName("Govind");
+//   document.writeln(name);
+  
+
+
+// let a = function (name2){
+//   return name2;
+    
+// }
+
+//      document.writeln(a("Ganesh "));
+
+// let add = function (a , b){
+//     let sum = a-b;
+//     return sum;
+// }
+
+//   document.writeln(add(30 , 5));
+
+// (function (){
+//     let a = "hello world"
+//     document.writeln(a);
+    
+// })();
+
+// function greet(name){
+//     // document.writeln(` hello ${name}`);
+//     document.writeln("hello " + name );
+    
+// }
+
+// greet.call(null ,"xyz");
+
+
+function emp (id , name ){
+     this.id = id ;
+     this.name  = name  ;
+}
+
+function pEmp(id, name){
+   emp.call(this,id,name);
+}
+function tEmp(id, name){
+   emp.call(this,id,name);
+}
+
+let a = new pEmp(12, "govind");
+let b = new tEmp(65, "golu");
+
+
+document.writeln("id : " +  a.id  + "   --  "+ a.name );
+document.writeln("<br>");
+
+document.writeln("id : " +  b.id  + "   --  "+ b.name );
+
+
+
+
+// let a = new 
+
+
+// class classname (){
+    let id;
+//     let name;
+
+    classname(id , name ){
+    //     id = id;
+    //     this.name  = name;
+
+    // }
+    // main {
+    //     classname obj = new classname(); 
+    // }
+
+     
+    </script>
+</body>
+</html>

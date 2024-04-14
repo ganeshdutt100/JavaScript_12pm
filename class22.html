@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM</title>
+</head>
+<body>
+    <h1>Screen</h1>
+    <h1>History object </h1>
+    <h1>Navigator object </h1>
+    
+    <!-- <img src="https://img.freepik.com/free-photo/mushroom-with-glowing-face-is-lit-up-dark_1340-30433.jpg?t=st=1710834472~exp=1710838072~hmac=c70ef147896af49c902f880fa86d64cfb4428dba6f8161249ecb8ce6231ec681&w=740" alt=""width="500px " height="600px"> -->
+
+
+
+    <script>
+        console.log("Screen Width : "+ window.screen.width);
+        console.log("Screen Height : "+ window.screen.height);
+        console.log("Available  Screen width : "+ window.screen.availWidth);
+        console.log("Available  Screen height : "+ window.screen.availHeight);
+
+        console.log("Color depth : "+ window.screen.colorDepth);
+
+       console.log(window.history.length);
+       
+        console.log(" Browser version : "+ window.navigator.appVersion);
+
+        console.log(" Browser name : "+ window.navigator.appName);
+
+
+        console.log(" Browser language : "+ window.navigator.language);
+
+
+        console.log(" Browser userAgent : "+ window.navigator.userAgent);
+
+//    5 location object 
+        
+        function getLoc(){
+            window.location = "https://www.youtube.com/";
+        }
+      
+        
+    </script>
+
+    <a href="https://www.freepik.com/">pic</a>
+
+<button onclick="getLoc()">click me </button>
+    
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        span{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+    <input type="text" placeholder="Enter your name" id="in"> 
+    <span id="inputS"></span> <br> <br>
+
+    <input type="password" placeholder="Enter your password" id="pass"> 
+    <span id="passS"></span> <br> <br>
+
+    <input type="password" placeholder="Enter your password" id="Conpass">
+     <span id="passS"></span> <br> <br>
+
+    <input type="submit" onclick=" return fun()">
+</form>
+
+
+<script>
+     let inp =  document.getElementById('in');
+      let Deepika =  document.getElementById('pass');
+
+    function fun(){
+
+    let a = inp.value;
+    let b= Deepika.value;
+
+        if(a == "" || a== null){
+    // alert(" ");
+
+ document.getElementById('inputS').textContent = "name can't be empty";
+ return false;
+
+    }
+
+    else if(b.length <6){
+        document.getElementById('passS').textContent = "password must be at least 6 characters";
+        return false;
+        
+    }
+return true;
+
+
+    }
+
+ 
+</script>
+</body>
+</html>

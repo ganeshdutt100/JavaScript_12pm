@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+.main{
+ color: white;
+ background-color: blue;
+ height: 500px;
+ width: 350px;
+ margin: auto;
+ padding-top: 50px;
+ padding-left: 10px;
+ border-radius: 10px;
+}
+
+.btn{
+    color: white;
+    background-color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+.btn:hover{
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+.btn:active{
+    color:red;
+    background-color: transparent;
+   
+}
+#inputText{
+    padding: 10px;
+    border:none ;
+    border-radius: 10px;
+    outline: none;
+}
+
+button{
+    color: rgb(255, 255, 255);
+    background-color: red;
+    border: none;
+}
+    </style>
+</head>
+<body>
+    <div class="main">
+    <input type="text" id="inputText">
+    <input class="btn" type="button" onclick="fun()" value=" click me ">
+    <ol id="list">
+       
+    </ol>
+
+   
+
+</div>
+
+<script>
+    let list =  document.getElementById('list');
+
+
+    function fun(){
+
+    let newTask =  document.getElementById('inputText').value;
+    
+        let newList = document.createElement('li');
+
+        newList.textContent= newTask;
+
+        list.appendChild(newList);
+
+
+        // create a delete button
+        const deleteButton = document.createElement('button');
+        deleteButton.textContent ='Delete';
+
+        deleteButton.onclick = function(){
+            list.removeChild(newList);
+        };
+
+        newList.appendChild(deleteButton);
+
+
+         document.getElementById('inputText')
+        .value="";
+    }
+    
+</script>
+</body>
+</html>

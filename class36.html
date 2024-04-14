@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            display: flex;
+            gap: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+    <p id="demo"></p>
+    <p id="demo2"></p>
+</div>
+    <script>
+    let para =  document.getElementById('demo')
+    let para1=  document.getElementById('demo2')
+    
+
+
+    new Promise((a,b)=>{
+        setTimeout(()=>{
+         a(1);
+        },2000)
+    }).then((value)=>{
+       para.innerHTML = value;
+ return new Promise((a,b)=>{
+    setTimeout(() => {
+        a( value*2)
+    }, 1000);
+ })
+    }).then((value)=>{
+        para1.innerHTML = value;
+    })
+
+
+
+
+
+        new Promise( function(resolve, reject) {
+            setTimeout(()=>{
+                resolve(1)
+            },2000)
+        }).then(function(value){
+            alert(value);
+            return new Promise(function(resolve, reject) {
+    setTimeout(()=>{
+        resolve(value*2)
+    },2000)
+            });
+        }).then(function(result){
+            alert(result);
+        }).catch(function(error){
+            console.log(error);
+            
+        })
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+    <script>
+
+        // Object literal 
+// let a = {
+//     name : "XYZ",
+//     age : 36,
+//     job: "Developer "
+// }
+
+// for(let x  in a){
+//     document.writeln( x +" : "+ a[x] + "<br>");
+    
+// }
+
+// document.writeln('<br>' );
+
+// Object Constructor
+// function test (sandeep , js){
+//       this.sandeep = sandeep;
+//       this.js = js;
+// }
+
+// let Test = new test("Sandeep" , 34);
+
+//   for( y in Test ){
+//     document.writeln( y +" : "+ Test[y] + "<br>");
+
+    
+//   }
+
+
+
+// class Person{
+//    constructor(name,age,job){
+//     this.name = name;
+//     this.age = age;
+//     this.job = job;
+//    }
+// }
+
+// let deepika = new Person("Deepika" , 22 , "Developer" );
+
+// for(let  a  in deepika){
+//     document.writeln( a  + " : "+ deepika[a] + "<br>");
+    
+// }
+
+
+//  function createNewFun(a,b,c){
+//     return {
+//         a : a,
+//         b:b,
+//         c:c
+//     }
+//  }
+
+//  let obj = createNewFun("A",12,"C");
+
+//  for(b  in obj){
+//     document.writeln(obj[b]);
+    
+//  }
+
+
+// Object Methods
+
+//   const target  = {
+//     a: 12,
+//     b:13,
+//   }
+
+//   const source = {
+//     b:14,
+//     c:15,
+//   }
+// console.log(target)
+
+//   const result = Object.assign(target, source);
+//   document.writeln(result);
+
+//   for( b in result){
+//     document.writeln(result[b]);
+    
+//   }
+
+//   console.log(result);
+
+
+// let obj1 = {
+//     a : 1,
+//     b : 2,
+//     c : 3,
+// }
+
+// let obj2 ={
+//     d:4,
+//     e:5,
+//     f:6,
+
+// }
+
+// let objectResult  = Object.assign({c:12,d:6},obj1);
+
+// let ObjectResult1 = Object.assign({h:45, g:100},obj2)
+
+// console.log( objectResult);
+// console.log( ObjectResult1);
+
+
+
+// Object create
+
+let a ={
+ 
+}
+let Person = Object.create(a);
+Person.name ="Sandeep";
+Person.age = 24;
+Person.title ="frontend Developer"; 
+
+for (c in Person){
+    document.writeln(Person[c] + "<br>");
+    
+}
+
+
+  
+  
+ 
+    </script>
+</body>
+</html>

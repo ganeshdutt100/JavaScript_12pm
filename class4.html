@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+
+<pre>
+    <input type="number" id="Inputtext1">
+    <input type="text" id="op">
+    <input type="number" id="Inputtext2">
+    <input type="text"  name="" id="result" disabled>
+    <button onclick="govind()" > click me</button>
+</pre>
+    <script>
+        function govind(){
+         console.log('button clicked');
+
+         let inputText1 = document.getElementById("Inputtext1").value;
+
+         let operators = document.getElementById("op");
+
+         let inputText2 = document.getElementById("Inputtext2").value;
+
+         let result =  document.getElementById('result');
+         
+
+     switch(operators){
+     case '+':
+        result = inputText1 + inputText2;
+        break;
+
+     case '-':
+     result = inputText1 - inputText2;
+        break;
+
+     case '*':
+     result = inputText1 * inputText2;
+        break;
+
+     case '/':
+        if(inputText2 == 0){
+            result =" Error"
+        }
+        else{
+            result = inputText1 / inputText2;
+
+        }
+        break;
+     
+    default:
+        result = " Error ";    
+  }
+
+  result.innerHTML = result;
+
+         
+        }
+    // let a = prompt("enter your number ");
+    //  a = Number(a);
+
+    // switch(a){
+    //     case 1:
+    //         document.writeln(a +  " : first");
+    //       break;
+
+    //         case 5:
+    //             document.writeln(a + " : second");
+    //            break;
+
+    //            case 10:
+    //         document.writeln(a  + " : third");
+    //           break;
+
+    //              default:
+    //                 document.writeln("Error");
+              
+                
+    // }
+
+//     let num1 = prompt("Enter your first number ");
+//      num1 = Number(num1);
+
+//     let operators = prompt(" + , - , * ,/")
+    
+//     let num2 = prompt("Enter your first number ");
+//     num2 = Number(num2);
+
+
+//      let result;
+
+
+  
+
+
+    </script>
+</body>
+</html>

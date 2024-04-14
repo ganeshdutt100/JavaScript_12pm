@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function sandeep(id) {
+            if (typeof id != 'number' || id < 0  || id >= 19) {
+                throw Error("Invalid id number  mr. sandeep gupta ")
+            }
+
+
+            return new Promise((resolve, reject) => {
+                resolve({
+                    id: id,
+                    useName: "Sandeep Admin"
+                })
+            })
+        } 
+
+
+        sandeep(19).then((result)=>{
+                   document.writeln(result.useName);
+                    }).catch((err) =>{
+                        document.writeln(err);
+                        
+                    })
+
+    </script>
+</body>
+
+</html>

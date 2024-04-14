@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <form action="">
+        <input type="text" id="in"> <span id="inS"></span> <br> <br>
+        <input type="password" id="pass"><span id="pS"></span> <br> <br>
+        <input type="email" id="em"><span id="eS"></span> <br> <br> 
+        <input type="submit" onclick="return fun()">
+    </form>
+
+    <script>
+        function fun() {
+            let ts = document.getElementById('inS');
+            let ps = document.getElementById('pS');
+            let es = document.getElementById('eS');
+
+            let t = document.getElementById('in').value;
+            let p = document.getElementById('pass').value;
+            let e = document.getElementById('em').value;
+
+            let atposition = e.indexOf('@');
+            let dotposition = e.lastIndexOf('.');
+
+            // Text
+
+            if (t == '' || t == null) {
+                ts.innerHTML = '<i class="fa-solid fa-xmark" style="color:red"></i>';
+                return false;
+            } else {
+                ts.innerHTML = '<i class="fa-solid fa-check" style="color:green"></i>';
+            }
+
+            // password
+            if (p.length < 6) {
+                ps.innerHTML = '<i class="fa-solid fa-xmark" style="color:red"></i>';
+                return false;
+            } else {
+                ps.innerHTML = '<i class="fa-solid fa-check" style="color:green"></i>';
+            }
+
+            // email
+            if (atposition < 1 || dotposition < atposition + 2 || dotposition + 2 >= e.length) {
+                es.innerHTML = '<i class="fa-solid fa-xmark" style="color:red"></i>';
+                return false;
+            } else {
+                es.innerHTML = '<i class="fa-solid fa-check" style="color:green"></i>';
+            }
+
+            return true; // Form will be submitted if all validations pass
+        }
+    </script>
+</body>
+</html>

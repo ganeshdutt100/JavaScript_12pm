@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  
+
+    
+        <input type="number" id="TextInput1">  <br><br>
+        <input type="text" id="operators">      <br><br>
+        <input type="number" id="TextInput2">    <br><br>
+        <input type="text" id="demo" disabled>   <br><br>
+        <button onclick="fun()">Perform task</button>
+ 
+    <script>
+        let TextInput1 = document.getElementById('TextInput1');
+        let operators = document.getElementById('operators');
+        let TextInput2 = document.getElementById('TextInput2');
+        let demo = document.getElementById('demo');
+
+        function fun() {
+            const newNum1 = parseFloat(TextInput1.value);
+            const newop = operators.value;
+            const newNum2 = parseFloat(TextInput2.value);
+
+            switch (newop) {
+                case '+':
+                    demo.value = newNum1 + newNum2;
+                    break;
+
+                case '-':
+                    demo.value = newNum1 - newNum2;
+                    break;
+
+                case '*':
+                    demo.value = newNum1 * newNum2;
+                    break;
+
+                case '/':
+                    if (newNum2 === 0) {
+                        demo.value = "Can't divide by zero";
+                    } else {
+                        demo.value = newNum1 / newNum2;
+                    }
+                    break;
+
+                default:
+                    demo.value = "Invalid input";
+            }
+        }
+    </script>
+</body>
+</html>

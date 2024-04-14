@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+</head>
+<body>
+<p>The result will be displayed after 3 second</p>
+    <p id="demo"></p>
+    <script>
+
+    // Example of setTimeout using callback
+// setTimeout(function(){
+// myFun("I am Ganesh dutt")
+// },3000)
+
+
+// function myFun(value){
+//  document.getElementById('demo').innerHTML = value;
+
+// }
+
+
+
+// width Promise
+
+let myPromise = new Promise(function(resolve, reject){
+setTimeout(() => {
+    resolve("i am Sandeep gupta");
+},3000)
+});
+
+myPromise.then( function(value){
+     document.getElementById('demo').innerHTML = value;
+    
+})
+
+
+//  function printDisplay(result){
+//      document.getElementById('demo').innerHTML = result;
+    
+//  }
+
+
+//  let myPromise = new Promise(function(resolve, reject){
+//     let str = "Sandeep";
+
+
+//     if(str == "Tanishka"){
+//         resolve("Attend class")
+//     }
+//     else{
+// reject("Not attend class");
+//     }
+    
+//  });
+
+// myPromise.then(
+//     function(value){printDisplay(value)},
+//     function(error){printDisplay(error)}
+// )
+
+
+
+
+        // let Promise = new Promise(function(resolve , reject){
+
+        // })
+
+
+    //     let Promise1 = new Promise((myresolve , myreject) =>{
+
+    //         // Perform some asynchronous operation
+    //         if(operation successful){
+    //           myresolve(" Opration completed");
+              
+    //         }
+    //         else{
+    // myreject( " opration failed");
+     
+    //         }
+
+    //     })
+
+
+
+
+
+    let a = new Promise(function(resolve,reject){
+let a = 30;
+
+if(a == 10){
+    resolve("ok")
+}
+else{
+    reject("not ok ")
+}
+    })
+
+a.then(
+    function(value){
+        document.writeln(value);
+        
+    },
+    function(error){
+        document.writeln(error);
+
+    }
+);
+            
+
+    </script>
+
+    <!-- <p> you create a Promise using the new promise() constructor .   it takes a function as an argument , which in turn takes two parameters : 1 ) resolve , 2 ) reject.inside this function , you Perform your asynchronous operation , and when it's completed , you call resolve to inside(indcate) success or reject to indcate failure </p> -->
+</body>
+</html>

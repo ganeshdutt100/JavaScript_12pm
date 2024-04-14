@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" id="nameInput" placeholder="Enter your name">
+    <button onclick="checkName()">Check Name</button>
+    <p id="demo"></p>
+
+    <script>
+
+        function display(result){
+             document.getElementById('demo').innerHTML = result;
+        }
+
+        function capitalizeFirstLetter(string) {
+            return string.charAt(0).toUpperCase() + string.slice(1);
+        }
+
+        function checkName() {
+            let name = document.getElementById('nameInput').value.toLowerCase();
+            let validNames = ["Bhumika", "dev", "Tanishka", "Surya", "Deepika", "mohit", "Sandeep","Govind"];
+
+            // Capitalize the first letter of each name in the array
+            validNames = validNames.map(function(name) {
+                return capitalizeFirstLetter(name);
+            });
+
+          
+            
+
+            let promise = new Promise(function(resolve, reject) {
+                // Capitalize the first letter of the input name for comparison
+                let capitalizedInputName = capitalizeFirstLetter(name);
+                if (validNames.includes(capitalizedInputName)) {
+                    resolve("Welcome, " + capitalizedInputName);
+                } else {
+                    reject("Error: Incorrect name entered.");
+                }
+            });
+
+            promise.then(
+                function(value){
+                    display(value);
+                },
+                function(error){
+                    display(error);
+                }
+            );
+        }      
+        
+ 
+    </script>
+</body>
+</html>

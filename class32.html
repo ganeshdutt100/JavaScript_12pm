@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .main{
+            height: 50px;
+            width: 50px;
+            /* background-color: blue; */
+            border-radius: 50px;
+            border: 5px solid rgb(237, 47, 47);
+            border-top: 5px solid rgb(255, 255, 255);
+            animation: ani 1s infinite linear;
+        }
+
+        @keyframes ani {
+            0%{
+                transform: rotate(0);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+            
+        }
+
+    </style>
+</head>
+<body>
+  
+     <form action="" id="myForm">
+        <input type="text" id="name" placeholder="Enter your name"> 
+        <input type="text" id="email" placeholder="Enter your email">
+
+        <input type="submit" >
+
+     </form>
+
+     <p id="message"></p>
+
+
+     <script>
+            let form =  document.getElementById('myForm');
+
+            let nameInput =  document.getElementById('name');
+
+            let emailInput =  document.getElementById('email');
+
+            let message =  document.getElementById('message');
+
+
+            form.addEventListener('submit', function(event){
+                event.preventDefault();
+          
+
+            //perform form validation 
+
+            if(nameInput.value.trim() ==='' || emailInput.value.trim() === ''){
+           message.textContent = "Please fill out all fields"
+           return;
+            }
+
+            message.textContent ="Form submitted successfully!";
+        }) ;   
+     
+        nameInput.addEventListener('input',function(){
+            message.textContent ="";
+        })
+        emailInput.addEventListener('input',function(){
+            message.textContent ="";
+        })
+
+        
+     </script>
+</body>
+</html>

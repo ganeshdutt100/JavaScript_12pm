@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+             .demo1{
+            color: red;
+        }
+        .para{
+            color: white;
+            background-color: black;
+        }
+   
+    </style>
+</head>
+<body>
+    <!-- <p id="demo" class="demo1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
+    <button onclick="fun()">Click</button> -->
+
+
+    
+    <!-- <p class="demo">Lorem ipsum dolor sit amet. 2</p>
+
+    <p id="demo1">Lorem ipsum dolor sit amet.</p> -->
+ <input type="text" name="username" value="Ganesh Dutt"> <br>
+ <input type="text" name="email" value="ganesh.dutt4achievers.com"> <br>
+ <input type="text" name="phone" value="7078404837"> <br>
+
+ <input type="password" name="password" value="ganesh12345">
+    <script>
+        //  document.getElementByName('')
+
+        let a = document.getElementsByName('username');
+
+        for(let i = 0; i < a.length; i++){
+            console.log(a[i].value);
+            
+        }
+        
+        
+
+
+//  function fun(){
+//    let a = document.getElementById('demo');
+//    a.textContent ="Hello world!"
+
+// a.classList.add('para');
+
+    
+//  }
+
+// let b =  document.getElementById('demo1').innerHTML="Hello world!";
+// console.log(b);
+
+
+//  let a = document.getElementsByClassName('demo');
+
+//  for(let i = 0; i < a.length; i++){
+//   console.log(a[i].innerHTML);
+  
+//  }
+// console.log(a);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+
+    <style>
+        #container{
+  background-color: black;
+  color: white;
+        }
+
+        .colorText{
+            color:red;
+        }
+    </style>
+</head>
+<body >
+    <h1>DOM</h1>
+
+    <!-- <div class="class1"> div 1</div>
+    <div class="class1"> div 2</div>
+    <div class="class1"> div 3</div>
+    <div id="class2"> div 4</div>
+
+    <div class="class1"> div 4</div>
+    <div class="class1"> div 5</div>
+    <div class="class1"> div 6</div>
+    <div class="class1"> div 7</div>
+    <div class="class1"> div 8</div> -->
+
+
+<div id="container">
+    <p id="update">Lorem ipsum dolor sit amet.</p>
+    <!-- <h1>this is a h1 tag</h1> -->
+
+    <p id="removeData">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, quam.</p>
+    </div>
+
+
+    <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+ <div style="display: none;" id="divS">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque consequatur obcaecati assumenda ut perferendis libero earum, hic, possimus odit cum in laboriosam beatae accusantium. Autem explicabo ab repellendus sint voluptas.</div>
+
+ <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam sequi facere a asperiores suscipit est eligendi! Nobis laudantium, modi deleniti rerum quibusdam ab sequi fugiat perferendis rem, vitae eveniet cumque?
+     <p style="display: none;">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis quaerat reprehenderit totam eos provident, deleniti, officia corrupti mollitia, tempore placeat fugit nihil! Consequuntur exercitationem maxime voluptas accusamus, quasi dolores nemo.
+ </p></p>
+
+    <script>
+        // let a =  document.getElementsByClassName('class1');
+        // let a =  document.querySelectorAll("#class2");
+
+        // document.writeln(a.length);
+
+        let a = document.createElement("h1");
+        a.textContent = "this is h1 tag";
+
+ document.getElementById('container').appendChild(a);
+
+
+ let remove =  document.getElementById('removeData')
+     remove.remove();
+
+     let updateData =  document.getElementById('update');
+
+    //  updateData.innerHTML = "<h1> updated </h1>";
+    //  updateData.innerText = "<h1> updated 2 </h1>";
+     updateData.textContent = "updated 2";
+
+    //  classList
+
+
+    let Para =  document.getElementById('para');
+
+    Para.classList.add("colorText");
+ 
+
+    let Div =  document.getElementById('divS');
+    console.log(Div.innerText);
+    console.log(Div.textContent);
+    
+    
+    
+
+     
+
+
+
+
+
+
+
+       
+        
+        
+        
+    </script>
+</body>
+</html>

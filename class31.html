@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="textinput" placeholder="Type something.........">
+
+    <p id="output"></p>
+
+
+    <script>
+        let text =  document.getElementById('textinput');
+        let para =  document.getElementById('output');
+
+
+          text.addEventListener('keydown', function(event){
+          para.textContent = `Key pressed: ${text.value}`;
+        //   para.textContent = text.value;
+          })
+
+
+        //   text.addEventListener('keyup', function(event){
+        //   para.textContent = `Key released: ${event.key}`;
+        //   })
+
+        
+        //   let a = "Ganesh"
+
+        //   document.writeln();
+          
+        
+    </script>
+
+</body>
+</html>

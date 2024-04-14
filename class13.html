@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        .img img{
+            width: 400px;
+            border-radius:10px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="img">
+            <img src="https://img.freepik.com/free-vector/realistic-light-bulb-design-concept-shape-heart-gray-isolated_1284-49292.jpg?t=st=1709623477~exp=1709627077~hmac=40361d83f766a63e689b6f1546d3c98b950d3caf81203821251e32afc55ff2f6&w=740" alt=""  id="img1">
+
+            <img src="https://img.freepik.com/free-vector/realistic-illuminated-electric-3d-bulb_1284-50445.jpg?t=st=1709623481~exp=1709627081~hmac=31eb220869f6a16b6da3d5e897322943e4fde993a3c1b2d9b5cd75473fb036aa&w=740" alt="" id="img2" style="display: none;">
+        </div>
+        <div class="btn">
+            <button onclick="bulb()">on / off</button>
+        </div>
+    </div>
+
+
+    <script>
+        function  bulb(){
+       
+            
+            let img1 =  document.getElementById('img1');
+            
+            let img2 =  document.getElementById('img2');
+
+            if(img1.style.display != "none"){
+              img1.style.display = "none";
+              img2.style.display = "block";
+            }
+            else{
+                img1.style.display = "block";
+              img2.style.display = "none";
+            }
+            
+        }
+    </script>
+</body>
+</html>

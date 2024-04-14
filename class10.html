@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function </title>
+</head>
+<body>
+    <script>
+    // <!-- call  -->
+
+    // function fun(name){
+    //     document.writeln("this is a fun " + name ) ;
+        
+    // }
+
+    // // fun();
+    // fun.call( null, "Method");
+
+
+//     function Emp(id , name ){
+//        this.id = id;
+//       this.name  = name ;
+//     }
+
+//     function Pemp(id, name , salary ){
+//         Emp.call(this, id,name);
+//         this.salary = salary ;
+//     }
+
+//     function Temp(id, name ,salary, time){
+
+//        Pemp.call(this,id,name ,salary);
+//        this.time = time;
+//     }
+
+//     let p  = new  Pemp(1,"xyz",30000);
+//     let t  = new  Temp(2,"xyz2",20000, 3);
+
+
+//   for(let x  in p){
+//     document.writeln(x + " : "+ p[x] + "<br>");
+    
+//   }
+//   document.writeln('<br>' );
+  
+//   for(let y  in t){
+//     document.writeln(y+ " : "+ t[y] + "<br>");
+    
+//   }
+
+
+// apply method 
+
+
+// function fn( name , age ){
+
+//  document.writeln("hello my name is " + name + " and age is " + age);
+ 
+ 
+// }
+
+// fn.apply(null, ["ganesh " , 26]);
+    
+// document.writeln('<br>' );
+
+// var arr = [10,32,43,1,23,48];
+//    var Max = Math.max.apply(null,arr)
+//    var Min = Math.min.apply(null,arr)
+ 
+//    document.writeln(Max);
+//    document.writeln(Min);
+   
+
+
+//  bind method ()
+
+// let object = {
+//     name : "deepika",
+//     getName : function (){
+//         return this.name;
+//     }
+// }
+
+// let object2 = {
+//     name : "sandeep",
+// }
+// let object3 = {
+//     name : "Anand",
+// }
+// let object4 = {
+//     name : "Surya ",
+// }
+
+// let a  = object.getName;
+// let b  = a.bind(object4);
+// document.writeln(b());
+
+function add(num1, num2){
+   return num1+ num2;
+}
+document.writeln(typeof add(10,54).toString());
+
+
+    </script>
+
+</body>
+</html>
