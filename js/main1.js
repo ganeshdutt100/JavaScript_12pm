@@ -33,22 +33,22 @@
 // let promise = Promise.any([itrable])
 
 
-let promise = Promise.any([
+// let promise = Promise.any([
 
-    new Promise((resolve, reject)=>{setTimeout(reject(new Error("its an Error! .. 1")),1000)}),
+//     new Promise((resolve, reject)=>{setTimeout(reject(new Error("its an Error! .. 1")),1000)}),
 
 
-    new Promise((resolve, reject)=>{setTimeout(reject(new Error("its an again Error!.. 2")),1000)}),
+//     new Promise((resolve, reject)=>{setTimeout(reject(new Error("its an again Error!.. 2")),1000)}),
 
 
   
 
-])
-promise.catch(x =>{
-    console.log(x.errors[0]);
-    console.log(x.errors[1]);
+// ])
+// promise.catch(x =>{
+//     console.log(x.errors[0]);
+//     console.log(x.errors[1]);
     
-})
+// })
 
 
 // let promise = Promise.any([
